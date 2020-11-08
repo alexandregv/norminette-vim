@@ -9,7 +9,6 @@ You will need a plugin manager to install syntastic and norminette-vim. I recomm
 
 1. If you are not on a 42 mac, install the [norminette](https://github.com/42Paris/norminette#installing-instructions).
 2. Install syntastic and norminette-vim with your plugin manager. See exemple below.
-3. Finish [Configuration](#configuration)
 
 With vim-plug, add this to the beginning of your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim):
 ```vim
@@ -21,6 +20,8 @@ Plug 'alexandregv/norminette-vim'
 call plug#end()
 ```
 then restart vim and run `:PlugInstall`
+
+3. Finish [Configuration](#configuration)
 
 ## Configuration
 
