@@ -52,4 +52,6 @@ let g:syntastic_check_on_wq = 0
 ## Usage
 
 Open any `.c` file and you should see your norm errors (if any!).  
-You can open the error list with `:Errors`
+You can open the error list with `:Errors`  
+
+![Screenshot](screenshot.jpg)
