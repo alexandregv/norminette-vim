@@ -59,7 +59,7 @@ You can open the error list with `:Errors`
 
 ## Don't want to bother with this syntastic/plugins stuff? Check this
 
-Vim has a native feature (vim-compiler and quickfix) which gives almost the same result. It just lacks the line indicators on the left side and the automatic check / list opening.
+Vim has a native feature (vim-compiler and quickfix) which gives almost the same result. It basically just lacks the (sweet) line indicators on the left side.
 
 1. `git clone https://github.com/alexandregv/norminette-vim ~/.vim/pack/syntax/start/norminette-vim`
 2. Open a `.c` file and run `:Norminette`
