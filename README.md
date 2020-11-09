@@ -56,3 +56,12 @@ let g:syntastic_check_on_wq = 0
 
 Open any `.c` file and you should see your norm errors (if any!).  
 You can open the error list with `:Errors`
+
+## Don't want to bother with this syntastic/plugins stuff? Check this
+
+Vim has a native feature (vim-compiler and quickfix) which gives almost the same result. It just lacks the line indicators on the left side and the automatic check / list opening.
+
+1. Copy [compiler/norminette.vim](compiler/norminette.vim) to `~/.vim/compiler/norminette.vim`
+2. Add `au BufReadPost,BufNewFile *.c,*.h compiler norminette` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim)
+
+Now you just need to run `:make %` everytime you want to check the norm. Use `:copen` to open error list.
