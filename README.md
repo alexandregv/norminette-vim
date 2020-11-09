@@ -30,7 +30,8 @@ then restart vim and run `:PlugInstall`
 Here is the configuration I recommend. **You at least need the first line to enable the checker.**
 ```vim
 " Enable norminette-vim (and gcc)
-let g:syntastic_c_checkers = ['gcc', 'norminette']
+let g:syntastic_c_checkers = ['norminette', 'gcc']
+let g:syntastic_aggregate_errors = 1
 
 " Set the path to norminette (do no set if using norminette of 42 mac)
 let g:syntastic_c_norminette_exec = '~/.norminette/norminette.rb'
@@ -38,7 +39,7 @@ let g:syntastic_c_norminette_exec = '~/.norminette/norminette.rb'
 " Pass custom arguments to norminette (this one ignores 42header)
 let g:syntastic_c_norminette_args = '-R CheckTopCommentHeader'
 
-" Check errors when opening a file
+" Check errors when opening a file (disable to speed up startup time)
 let g:syntastic_check_on_open = 1
 
 " Enable error list
