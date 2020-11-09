@@ -23,11 +23,11 @@ call plug#end()
 ```
 then restart vim and run `:PlugInstall`
 
-3. Finish [Configuration](#configuration)
+3. Copy the [configuration](#configuration) to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim). Note that **first line is mandatory**.
 
 ## Configuration
 
-Some configuration options are available, here is what I recommend.
+Here is the configuration I recommend. **You at least need the first line to enable the checker.**
 ```vim
 " Enable norminette-vim (and gcc)
 let g:syntastic_c_checkers = ['gcc', 'norminette']
