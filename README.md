@@ -63,3 +63,5 @@ Vim has a native feature (vim-compiler and quickfix) which gives almost the same
 
 1. `git clone https://github.com/alexandregv/norminette-vim ~/.vim/pack/syntax/start/norminette-vim`
 2. Open a `.c` file and run `:Norminette`
+
+You can specify norminette path by adding `let g:norminette_exec = '~/.norminette/norminette.rb'` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim).
