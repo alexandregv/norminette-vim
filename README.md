@@ -61,7 +61,5 @@ You can open the error list with `:Errors`
 
 Vim has a native feature (vim-compiler and quickfix) which gives almost the same result. It just lacks the line indicators on the left side and the automatic check / list opening.
 
-1. Copy [compiler/norminette.vim](compiler/norminette.vim) to `~/.vim/compiler/norminette.vim`
-2. Add `au BufReadPost,BufNewFile *.c,*.h compiler norminette` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim)
-
-Now you just need to run `:make %` everytime you want to check the norm. Use `:copen` to open error list.
+1. `git clone https://github.com/alexandregv/norminette-vim ~/.vim/pack/syntax/start/norminette-vim`
+2. Open a `.c` file and run `:Norminette`

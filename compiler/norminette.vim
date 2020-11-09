@@ -6,7 +6,9 @@
 if exists("current_compiler") | finish | endif
 let current_compiler = "norminette"
 
-CompilerSet makeprg=~/.norminette/norminette.rb
+" if !exists("g:norminette_exec") && exists("g:syntastic_c_norminette_exec")  | let g:norminette_exec=g:syntastic_c_norminette_exec | endif
+if !exists("g:norminette_exec") | let g:norminette_exec="~/.norminette/norminette.rb" | endif
+let &makeprg=g:norminette_exec
 
 CompilerSet errorformat =%-PNorme:\ %f,
 CompilerSet errorformat+=%t%.%#\ (line\ %l\\,\ col\ %c):\ %m,
