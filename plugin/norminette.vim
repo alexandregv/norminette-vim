@@ -18,3 +18,9 @@ function! NorminetteCompiler()
 	copen
 	compiler gcc
 endfunction
+
+" Close quickfix window when closing file
+aug QFClose
+	au!
+	au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
+aug END
