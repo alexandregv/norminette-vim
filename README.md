@@ -1,6 +1,8 @@
 # norminette-vim
 
-42 norminette (linter) for vim
+42 norminette (linter) for vim. It shows norm errors directly in vim, no more switching between vim and norminette.
+
+Supports both Norm version 2 and Norm version 3.
 
 ![Screenshot](screenshot.jpg)
 
@@ -55,6 +57,12 @@ let g:syntastic_auto_loc_list = 1
 " Skip check when closing
 let g:syntastic_check_on_wq = 0
 ```
+
+## Norm version
+
+To select the Norm version (2 or 3), just set `g:syntastic_c_norminette_exec` to the right norminette path.  
+For v2 ([42Paris/norminette](https://github.com/42Paris/norminette)), it is probably `~/.norminette/norminette.rb`.  
+For v3 ([42School/norminette](https://github.com/42School/norminette)), `norminette` should be enough if you installed it correctly.  
 
 ## Usage
 

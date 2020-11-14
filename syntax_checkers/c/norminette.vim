@@ -26,11 +26,14 @@ function! SyntaxCheckers_c_norminette_GetLocList() dict
     let makeprg = self.makeprgBuild({})
 
     let errorformat =
-        \ '%+PNorme: %f,' .
+        \ '%PNorme: %f,' .
         \ '%t%.%# (line %l\, col %c): %m,' .
         \ '%t%.%# (line %l): %m,' .
-        \ '%t%.%#: %m,' .
-        \ '%-Q'
+        \ '%Q,' .
+        \ '%P%f: KO!,' .
+        \ '%.%#(line: %l\, col: %c):%m,' .
+        \ '%.%#(line: %l):%m,' .
+        \ '%Q,'
 
     let env = { 'RUBYOPT': '-W0' }
 
@@ -42,9 +45,9 @@ function! SyntaxCheckers_c_norminette_GetLocList() dict
 endfunction
 
 function! Norminette_vim_preprocess(errors) abort " {{{2
-    return map(copy(map(copy(a:errors), 
-        \ 'substitute(v:val, "Error:", "Error (line 1):", "")')), 
-        \ 'substitute(v:val, "Warning:", "Warning (line 1):", "")')
+     return map(copy(map(copy(a:errors),
+         \ 'substitute(v:val, "Error:", "Error (line 1):", "")')),
+         \ 'substitute(v:val, "Warning:", "Warning (line 1):", "")')
 endfunction " }}}2
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
