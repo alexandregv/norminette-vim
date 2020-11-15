@@ -77,3 +77,11 @@ Vim has a native feature (vim-compiler and quickfix) which gives almost the same
 2. Open a `.c` file and run `:Norminette`
 
 You can specify norminette path by adding `let g:norminette_exec = '~/.norminette/norminette.rb'` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim).
+
+## See also
+
+* [norminette-action](https://github.com/alexandregv/norminette-action) - GitHub Action (CI) to test norminette after each push, automatically.
+* [norminette-action-demo](https://github.com/alexandregv/norminette-action-demo) - Demo repository for norminette-action.
+* [norminette-docker](https://github.com/alexandregv/norminette-docker) - A docker image for norminette. Used by norminette-action.
+
+All of these are compatible with Norm version 2 and 3.
