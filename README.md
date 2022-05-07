@@ -36,7 +36,7 @@ let g:syntastic_c_checkers = ['norminette', 'gcc']
 let g:syntastic_aggregate_errors = 1
 
 " Set the path to norminette (do no set if using norminette of 42 mac)
-let g:syntastic_c_norminette_exec = '~/.norminette/norminette.rb'
+let g:syntastic_c_norminette_exec = 'norminette'
 
 " Support headers (.h)
 let g:c_syntax_for_h = 1
@@ -61,8 +61,10 @@ let g:syntastic_check_on_wq = 0
 ## Norm version
 
 To select the Norm version (2 or 3), just set `g:syntastic_c_norminette_exec` to the right norminette path.  
-For v2 ([42Paris/norminette](https://github.com/42Paris/norminette)), it is probably `~/.norminette/norminette.rb`.  
-For v3 ([42School/norminette](https://github.com/42School/norminette)), `norminette` should be enough if you installed it correctly.  
+- For v2 ([42Paris/norminette](https://github.com/42Paris/norminette)), it is probably `~/.norminette/norminette.rb`.  
+- For v3 ([42School/norminette](https://github.com/42School/norminette)), `norminette` should be enough if you installed it correctly.  
+Make sure that the `norminette` executable is available in your PATH. Check it with `whereis norminette` and `type -a norminette`.  
+If not found, make sure that Python's bin directory is in your PATH. Get it with `python3 -m site` or `python -m site`.
 
 ## Usage
 
@@ -76,7 +78,7 @@ Vim has a native feature (vim-compiler and quickfix) which gives almost the same
 1. `git clone https://github.com/alexandregv/norminette-vim ~/.vim/pack/syntax/start/norminette-vim`
 2. Open a `.c` file and run `:Norminette`
 
-You can specify norminette path by adding `let g:norminette_exec = '~/.norminette/norminette.rb'` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim).
+If needed, you can specify norminette path by adding `let g:norminette_exec = '~/.norminette/norminette.rb'` to your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim).
 
 ## See also
 
