@@ -8,10 +8,10 @@ Supports both Norm version 2 and Norm version 3.
 
 ## Installation
 
-norminette-vim needs [syntastic](https://github.com/vim-syntastic/syntastic) and the [norminette](https://github.com/42Paris/norminette) to work.  
+norminette-vim needs [syntastic](https://github.com/vim-syntastic/syntastic) and the [norminette](https://github.com/42School/norminette) to work.  
 You will need a plugin manager to install syntastic and norminette-vim. I recommend [vim-plug](https://github.com/junegunn/vim-plug).  
 
-1. If you are not on a 42 mac, install the [norminette](https://github.com/42Paris/norminette#installing-instructions).
+1. If you are not on a 42 mac, install the [norminette](https://github.com/42School/norminette).
 2. Install syntastic and norminette-vim with your plugin manager. See exemple below.
 
 With vim-plug, add this to the beginning of your `~/.vimrc` (or `~/.config/nvim/init.vim` for neovim):
