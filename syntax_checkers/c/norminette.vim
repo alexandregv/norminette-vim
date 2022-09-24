@@ -26,9 +26,9 @@ function! SyntaxCheckers_c_norminette_GetLocList() dict
     let makeprg = self.makeprgBuild({})
 
     let errorformat =
-        \ '%P%f: KO!,' .
-        \ '%.%#(line: %l\, col: %c):%m,' .
-        \ '%.%#(line: %l):%m,' .
+        \ '%P%f: Error!,' .
+        \ '%t%.%#(line:%.%# %l\, col:%.%# %c):%m,' .
+        \ '%t%.%#(line:%.%# %l):%m,' .
         \ '%Q,' .
         \ '%PNorme: %f,' .
         \ '%t%.%# (line %l\, col %c): %m,' .
