@@ -10,12 +10,12 @@ if !exists("g:norminette_exec") && exists("g:syntastic_c_norminette_exec") | let
 if !exists("g:norminette_exec") | let g:norminette_exec="norminette" | endif
 let &makeprg=g:norminette_exec
 
-CompilerSet errorformat =%PNorme:\ %f,
-CompilerSet errorformat+=%t%.%#\ (line\ %l\\,\ col\ %c):\ %m,
-CompilerSet errorformat+=%t%.%#\ (line\ %l):\ %m,
-CompilerSet errorformat+=%Q,
-
 CompilerSet errorformat =%P%f:\ KO!,
 CompilerSet errorformat+=%.%#(line:\ %l\\,\ col:\ %c):%m,
 CompilerSet errorformat+=%.%#(line:\ %l):%m,
+CompilerSet errorformat+=%Q,
+
+CompilerSet errorformat+=%PNorme:\ %f,
+CompilerSet errorformat+=%t%.%#\ (line\ %l\\,\ col\ %c):\ %m,
+CompilerSet errorformat+=%t%.%#\ (line\ %l):\ %m,
 CompilerSet errorformat+=%Q,
