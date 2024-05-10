@@ -87,3 +87,6 @@ If needed, you can specify norminette path by adding `let g:norminette_exec = '~
 * [norminette-docker](https://github.com/alexandregv/norminette-docker) - A docker image for norminette. Used by norminette-action.
 
 All of these are compatible with Norm version 2 and 3.
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/alexandregv/norminette-vim.svg?variant=adaptive)](https://starchart.cc/alexandregv/norminette-vim)
